@@ -8,13 +8,13 @@ Gem::Specification.new do |gem|
   gem.version       = Octopress::Codefence::VERSION
   gem.authors       = ["Brandon Mathis"]
   gem.email         = ["brandon@imathis.com"]
-  gem.description   = %q{Write beautiful ``` fenced code snippets with in any template.}
-  gem.summary       = %q{Write beautiful ``` fenced code snippets with in any template.}
+  gem.description   = %q{Write beautiful fenced code snippets with in any template.}
+  gem.summary       = %q{Write beautiful fenced code snippets with in any template.}
   gem.homepage      = "https://github.com/octopress/octopress-codefence"
   gem.license       = "MIT"
 
   gem.add_runtime_dependency 'octopress-pygments', '>= 1.1.0'
-  gem.add_runtime_dependency 'jekyll-page-hooks', '>= 1.0.1'
+  gem.add_runtime_dependency 'jekyll-page-hooks', '>= 1.0.2'
 
   gem.files         = `git ls-files`.split($/)
   gem.require_paths = ["lib"]

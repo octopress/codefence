@@ -1,12 +1,11 @@
 require 'octopress-codefence/version'
 require 'octopress-pygments'
-require 'jekyll'
 require 'jekyll-page-hooks'
 
 module Jekyll
   class Codefence < PageHooks
     def pre_render(page)
-      page.content = Octopress::Codefence.render(page.content, page.ext)
+      page.content = Octopress::Codefence.new(page.content, page.ext).render
     end
   end
 end
