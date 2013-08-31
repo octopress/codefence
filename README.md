@@ -1,4 +1,4 @@
-# Octopress::Codefence
+# Octopress Codefence
 
 Write beautiful fenced code snippets within any template.
 
