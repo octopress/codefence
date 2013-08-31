@@ -1,6 +1,6 @@
 # Octopress::Codefence
 
-TODO: Write a gem description
+Write beautiful fenced code snippets within any template.
 
 ## Installation
 
