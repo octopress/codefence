@@ -2,6 +2,9 @@
 
 Write beautiful fenced code snippets within any template.
 
+[![Build
+Status](https://travis-ci.org/octopress/octopress-codefence.png?branch=master)](https://travis-ci.org/octopress/octopress-codefence)
+
 ## Installation
 
 Add this line to your application's Gemfile:
