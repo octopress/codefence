@@ -5,7 +5,7 @@ require 'jekyll-page-hooks'
 module Jekyll
   class Codefence < PageHooks
     def pre_render(page)
-      page.content = Octopress::Codefence.new(page.content, page.ext).render
+      page.content = Octopress::Codefence.new(page.content, page.ext, page.site.config['pygments_aliases']).render
     end
   end
 end
@@ -15,9 +15,10 @@ module Octopress
     AllOptions = /([^\s]+)\s+(.+?)\s+(https?:\/\/\S+|\/\S+)\s*(.+)?/i
     LangCaption = /([^\s]+)\s*(.+)?/i
 
-    def initialize(input, ext=nil)
+    def initialize(input, ext=nil, aliases=nil)
       @input   = input
       @ext     = ext
+      @aliases = aliases
     end
     
     def render
@@ -59,6 +60,7 @@ module Octopress
 
 
     def get_code(code, options)
+      options[:aliases] = @aliases || {}
       code = Pygments.highlight(code, options)
       code = "<notextile>#{code}</notextile>" if !@ext.nil? and @ext.match(/textile/)
       code
