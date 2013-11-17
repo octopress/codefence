@@ -1,5 +1,7 @@
 name: Your New Jekyll Site
 markdown: redcarpet
 pygments: true
+destination: site
+source: source
 pygments_aliases:
   abc: ruby

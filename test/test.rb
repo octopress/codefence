@@ -1,15 +1,13 @@
-require 'octopress-codefence'
+require 'colorator'
 
-str = <<-EOF
+`bundle exec jekyll build --trace`
 
-whatver
+diff = `diff expected.html site/index.html`
 
-``` ruby
-puts awesome unless lame
-```
-
-something
-
-EOF
-
-puts Octopress::Codefence.new(str).render
+if diff.size == 0
+  puts "passed".green
+else
+  puts "failed".red
+  puts diff
+  abort
+end
