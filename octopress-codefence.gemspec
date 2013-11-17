@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/octopress/octopress-codefence"
   gem.license       = "MIT"
 
-  gem.add_runtime_dependency 'octopress-pygments', '>= 1.3.0'
+  gem.add_runtime_dependency 'octopress-pygments', '>= 1.3.1'
   gem.add_runtime_dependency 'jekyll-page-hooks', '>= 1.0.2'
 
   gem.add_development_dependency 'rake'

@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.1
+- Updated Octopress pygments, setting escape option to true.
+
 ## 1.2.0
 - Updated Octopress pygments, adding default Liquid escape.
 

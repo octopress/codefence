@@ -39,7 +39,7 @@ module Octopress
     end
 
     def get_options(markup)
-      defaults = {}
+      defaults = { escape: true }
       clean_markup = Pygments.clean_markup(markup)
 
       if clean_markup =~ AllOptions
