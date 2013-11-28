@@ -16,9 +16,6 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency 'octopress-pygments', '>= 1.3.1'
   gem.add_runtime_dependency 'jekyll-page-hooks', '>= 1.0.2'
 
-  gem.add_development_dependency 'rake'
-  gem.add_development_dependency 'rspec'
-
   gem.files         = `git ls-files`.split($/)
   gem.require_paths = ["lib"]
 end
