@@ -18,3 +18,4 @@ tmp
 .DS_Store
 .pygments-cache
 _site
+.sass-cache

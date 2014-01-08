@@ -1,6 +1,9 @@
 # Changelog
 
 ## 1.2.1
+- Updated to Octopress pygments 2.0. Now stylesheets can be added using Octopress Ink.
+
+## 1.2.1
 - Updated Octopress pygments, setting escape option to true.
 
 ## 1.2.0

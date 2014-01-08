@@ -5,3 +5,6 @@ destination: site
 source: source
 pygments_aliases:
   abc: ruby
+
+gems:
+  - octopress-codefence
