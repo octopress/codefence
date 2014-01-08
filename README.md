@@ -2,7 +2,8 @@
 
 Write beautiful fenced code snippets within any template.
 
-[![Build Status](https://travis-ci.org/octopress/octopress-codefence.png?branch=master)](https://travis-ci.org/octopress/octopress-codefence)
+[![Gem Version](https://badge.fury.io/rb/octopress-codefence.png)](http://badge.fury.io/rb/octopress-codefence)
+[![Build Status](https://travis-ci.org/octopress/codefence.png?branch=master)](https://travis-ci.org/octopress/codefence)
 
 ## Installation
 
