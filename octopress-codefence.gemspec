@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["brandon@imathis.com"]
   gem.description   = %q{Write beautiful fenced code snippets with in any template.}
   gem.summary       = %q{Write beautiful fenced code snippets with in any template.}
-  gem.homepage      = "https://github.com/octopress/octopress-codefence"
+  gem.homepage      = "https://github.com/octopress/codefence"
   gem.license       = "MIT"
 
   gem.add_runtime_dependency 'octopress-pygments', '>= 2.0.0'
