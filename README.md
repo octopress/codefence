@@ -34,7 +34,7 @@ Next, add the Octopress stlyesheets tag to your site layout this will inject sty
 {% octopress_css %}
 ```
 
-Finally, give it a try.
+Finally, give it a try. Here's an code snippet sample.
 
     ```ruby mark:2-4 title:"Testing codefence" url:"https://github.com/octopress/codefence" link_text:"plugin link"
     class Float
