@@ -62,6 +62,14 @@ Finally, give it a try.
     end
     ```
 
+Here's a sample:
+
+<img src="http://cl.ly/TFCm/content.png" alt='sample screenshot of the code snippet above renderd with the light theme' width="816px">
+
+Here's a look at the dark theme:
+
+<img src="http://cl.ly/TFPX/content.png" alt='sample screenshot of the code snippet above renderd with the dark theme' width="816px">
+
 More documentation coming soon.
 
 ## Contributing
