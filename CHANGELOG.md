@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.2
+- Removed test files from gem pkg
+
 ## 1.3.1
 - Changed repo homepage url in gemspec.
 
