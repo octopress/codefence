@@ -1,7 +1,10 @@
 # Changelog
 
+## 1.4.0
+- Switched to the new octopress-code-highlighter gem.
+
 ## 1.3.2
-- Removed test files from gem pkg
+- Removed test files from gem pkg.
 
 ## 1.3.1
 - Changed repo homepage url in gemspec.
@@ -16,7 +19,7 @@
 - Updated Octopress pygments, adding default Liquid escape.
 
 ## 1.1.0
-- Added support for language aliases in Jekyll config
+- Added support for language aliases in Jekyll config.
 
 ## 1.0.0
 - Initial release

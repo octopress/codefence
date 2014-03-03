@@ -1,11 +1,11 @@
 require 'octopress-codefence/version'
-require 'octopress-pygments'
+require 'octopress-code-highlighter'
 require 'jekyll-page-hooks'
 
 module Jekyll
   class Codefence < PageHooks
     def pre_render(page)
-      page.content = Octopress::Codefence.new(page.content, page.ext, page.site.config['pygments_aliases']).render
+      page.content = Octopress::Codefence.new(page.content, page.ext, page.site.config['code_aliases']).render
     end
   end
 end
@@ -30,9 +30,9 @@ module Octopress
           code = $2.to_s
           begin
             get_code(code, get_options(markup))
-          rescue MentosError => e
+          rescue => e
             markup = "```#{markup}"
-            Pygments.highlight_failed(e, "```[language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]\ncode\n```", markup, code)
+            CodeHighlighter.highlight_failed(e, "```[language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]\ncode\n```", markup, code)
           end
         end
       end
@@ -40,7 +40,7 @@ module Octopress
 
     def get_options(markup)
       defaults = { escape: true }
-      clean_markup = Pygments.clean_markup(markup)
+      clean_markup = CodeHighlighter.clean_markup(markup)
 
       if clean_markup =~ AllOptions
         defaults = {
@@ -55,13 +55,13 @@ module Octopress
           title: $2
         }
       end
-      Pygments.parse_markup(markup, defaults)
+      CodeHighlighter.parse_markup(markup, defaults)
     end
 
 
     def get_code(code, options)
       options[:aliases] = @aliases || {}
-      code = Pygments.highlight(code, options)
+      code = CodeHighlighter.highlight(code, options)
       code = "<notextile>#{code}</notextile>" if !@ext.nil? and @ext.match(/textile/)
       code
     end
