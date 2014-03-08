@@ -19,3 +19,4 @@ tmp
 .pygments-cache
 _site
 .sass-cache
+.code-highlighter-cache
