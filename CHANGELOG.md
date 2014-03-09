@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.1
+- Updated to latest octopress-code-highlighter gem (for Sass 3.3 support).
+
 ## 1.4.0
 - Switched to the new octopress-code-highlighter gem.
 

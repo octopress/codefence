@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/octopress/codefence"
   gem.license       = "MIT"
 
-  gem.add_runtime_dependency 'octopress-code-highlighter', '~> 3.0.1'
+  gem.add_runtime_dependency 'octopress-code-highlighter', '~> 3.1.0'
   gem.add_runtime_dependency 'jekyll-page-hooks', '>= 1.0.2'
 
   gem.files         = `git ls-files`.split($/).reject {|f| f =~ /^test\// }
