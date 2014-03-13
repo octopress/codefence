@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.2
+- Updated to latest octopress-code-highlighter gem (removing Octopress Ink dependency).
+
 ## 1.4.1
 - Updated to latest octopress-code-highlighter gem (for Sass 3.3 support).
 
