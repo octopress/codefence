@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.3 - 2014-06-29
+- Updated to latest octopress-code-highlighter gem. Relaxed dependencies.
+
 ## 1.4.2
 - Updated to latest octopress-code-highlighter gem (removing Octopress Ink dependency).
 
