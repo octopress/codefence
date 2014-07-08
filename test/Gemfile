@@ -1,3 +1,4 @@
 source 'https://rubygems.org'
 
 gem 'octopress-codefence', :path => '../'
+gem 'clash'

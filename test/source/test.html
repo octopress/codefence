@@ -1,5 +1,4 @@
 ---
-layout: test
 ---
 
 ``` ruby
@@ -9,6 +8,22 @@ puts @awesome if true
 ```
 {{>will it work}}
 {% it should %}
+```
+
+```ruby title:"Check if a number is prime" mark:3
+class Fixnum
+  def prime?
+    ('1' * self) !~ /^1?$|^(11+?)\1+$/
+  end
+end
+```
+
+```coffee
+# Given an alphabet:
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+# Iterate over part of the alphabet:
+console.log letter for letter in alphabet[4..8]
 ```
 
 ``` plain testing tabs
@@ -22,3 +37,4 @@ testing
 	for
 things
 ```
+
