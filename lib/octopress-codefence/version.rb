@@ -1,5 +1,5 @@
 module Octopress
-  class Codefence
-    VERSION = "1.4.3"
+  module Codefence
+    VERSION = "1.4.4"
   end
 end

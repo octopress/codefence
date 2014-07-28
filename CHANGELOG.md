@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.4 - 2014-07-27
+- Now using octopress-hooks instead of jekyll-page-hooks.
+
 ## 1.4.3 - 2014-06-29
 - Updated to latest octopress-code-highlighter gem. Relaxed dependencies.
 

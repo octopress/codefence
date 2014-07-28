@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
   gem.license       = "MIT"
 
   gem.add_runtime_dependency 'octopress-code-highlighter', '~> 4.2'
-  gem.add_runtime_dependency 'jekyll-page-hooks', '~> 1.1'
+  gem.add_runtime_dependency 'octopress-hooks', '~> 2.1'
 
   gem.add_development_dependency 'clash'
   gem.add_development_dependency 'jekyll'
