@@ -32,7 +32,7 @@ Next, add the Octopress stlyesheets tag to your site layout this will inject sty
 
 ```html
 <!--Somewhere in your site's head-->
-{% octopress_css %}
+{% css_asset_tag %}
 ```
 
 Finally, give it a try. Here's an code snippet sample.
