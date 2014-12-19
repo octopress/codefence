@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.5 - 2014-12-19
+- Fix to readme
+- Integrated octopress-docs support
+
 ## 1.4.4 - 2014-07-27
 - Now using octopress-hooks instead of jekyll-page-hooks.
 
