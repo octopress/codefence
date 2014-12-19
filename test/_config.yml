@@ -1,10 +1,9 @@
 name: Your New Jekyll Site
 markdown: redcarpet
 highlighter: pygments
-destination: site
-source: source
 pygments_aliases:
   abc: ruby
 
 gems:
   - octopress-codefence
+exclude: [Gemfile*]
