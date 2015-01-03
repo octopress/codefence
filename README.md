@@ -7,33 +7,56 @@ Write beautiful fenced code snippets within any template.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+### Using Bundler
 
-    gem 'octopress-codefence'
+Add this line to your application's Gemfile (optionally in the `:jekyll_plugins` group:
 
-And then execute:
+```ruby
+group :jekyll_plugins do
+  gem 'octopress-codefence'
+end
+```
+
+Then install the gem with Bundler
 
     $ bundle
 
-Or install it yourself as:
+### Manual Installation
 
     $ gem install octopress-codefence
 
-## Usage
-
-First, add the gem to your Jekyll configuration.
+Then add the gem to your Jekyll configuration.
 
 ```yaml
 gems:
   - octopress-codefence
 ```
 
-Next, add the Octopress stlyesheets tag to your site layout this will inject stylesheet tags for all Octopress Ink plugins.
+## Usage
 
-```html
-<!--Somewhere in your site's head-->
-{% css_asset_tag %}
-```
+The Octopress codefence has some
+
+### Syntax
+
+   ```lang [options]
+   [code]
+   ```
+
+### Options
+
+Note that order does not matter.
+
+| Options      | Example                | Description                                                           |
+|:-------------|:-----------------------|:----------------------------------------------------------------------|
+|`lang`        | `ruby`                 | Used by the syntax highlighter. Passing 'plain' disables highlighting.|
+|`title`       | `title:"Figure 1.A"`   | Add a figcaption title to your code block. |
+|`link_text`   | `link_text:"Download"` | Text for the link, default: `"link"`. |
+|`linenos`     | `lineos:false`         | Disable line numbering. |
+|`start`       | `start:5`              | Start the line numbering at the given value. |
+|`mark`        | `mark:1-4,8`           | Highlight lines of code. This example marks lines 1,2,3,4 and 8 |
+|`class`       | `class:"css example"`  | Add CSS class names to the code `<figure>` element |
+
+### Examples
 
 Finally, give it a try. Here's an code snippet sample.
 
@@ -63,7 +86,35 @@ Finally, give it a try. Here's an code snippet sample.
     end
     ```
 
-Here's a sample:
+Which renders like this:
+
+<!-- mark:2-4 title:"Testing codefence" url:"https://github.com/octopress/codefence" link_text:"plugin link" -->
+```ruby
+class Float
+  def number_decimal_places
+    self.to_s.length-2
+  end
+  
+  def to_fraction
+    higher = 10**self.number_decimal_places
+    lower = self*higher
+
+    gcden = greatest_common_divisor(higher, lower)
+
+    return (lower/gcden).round, (higher/gcden).round
+  end
+  
+private
+
+  def greatest_common_divisor(a, b)
+     while a%b != 0
+       a,b = b.round,(a%b).round
+     end 
+     return b
+  end
+end
+```
+Here's a themed sample:
 
 <img src="http://cl.ly/TFCm/content.png" alt='sample screenshot of the code snippet above renderd with the light theme' width="816px">
 

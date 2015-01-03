@@ -28,6 +28,7 @@ module Octopress
       
       def render
         @input.encode!("UTF-8")
+        @input = sub_option_comment(@input)
         @input.gsub /^`{3}(.+?)`{3}/m do
           str = $1.to_s
           str.gsub /([^\n]+)?\n(.+?)\Z/m do
@@ -40,6 +41,25 @@ module Octopress
               CodeHighlighter.highlight_failed(e, "```[language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]\ncode\n```", markup, code)
             end
           end
+        end
+      end
+
+      # Allow html comments to set rendering options
+      #
+      #  Example:
+      #   <!-- title:"Example 1" -->
+      #   ```ruby
+      #
+      #  This becomes:
+      #
+      #   ```ruby title:"Example 1"
+      #
+      # This allows Readme files to be rendered by GitHub and other markdown codefences
+      # But when processed by Octopress Codefence, the code examples are rendered with options
+      #
+      def sub_option_comment(input)
+        input.gsub /<!--(.+?)-->\n`{3}([^\n]+)/ do
+          "```#{$2} #{$1}"
         end
       end
 
