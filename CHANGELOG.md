@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.0 - 2015-01-03
+- Now html comments can be used for setting code options.
+- Added usage documentation.
+
 ## 1.4.5 - 2014-12-19
 - Fix to readme
 - Integrated octopress-docs support
