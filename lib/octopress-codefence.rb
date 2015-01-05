@@ -97,9 +97,10 @@ end
 if defined? Octopress::Docs
   Octopress::Docs.add({
     name:        "Octopress Codefence",
+    gem:         "octopress-codefence",
+    version:     Octopress::Codefence::VERSION,
     description: "Write beatuiful code snippets, with backtick code fences",
     path:        File.expand_path(File.join(File.dirname(__FILE__), "../")),
     source_url:  "https://github.com/octopress/codefence",
-    version:     Octopress::Codefence::VERSION
   })
 end

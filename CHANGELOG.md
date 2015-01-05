@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.5.1 - 2015-01-04
+- Documentation updates
+
 ## 1.5.0 - 2015-01-03
 - Now html comments can be used for setting code options.
 - Added usage documentation.

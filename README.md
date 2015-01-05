@@ -9,13 +9,11 @@ Write beautiful fenced code snippets within any template.
 
 ### Using Bundler
 
-Add this line to your application's Gemfile (optionally in the `:jekyll_plugins` group:
+Add this gem to your site's Gemfile in the `:jekyll_plugins` group:
 
-```ruby
-group :jekyll_plugins do
-  gem 'octopress-codefence'
-end
-```
+    group :jekyll_plugins do
+      gem 'octopress-codefence'
+    end
 
 Then install the gem with Bundler
 
@@ -27,10 +25,8 @@ Then install the gem with Bundler
 
 Then add the gem to your Jekyll configuration.
 
-```yaml
-gems:
-  - octopress-codefence
-```
+    gems:
+      - octopress-codefence
 
 ## Usage
 
