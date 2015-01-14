@@ -34,9 +34,9 @@ The Octopress codefence has some
 
 ### Syntax
 
-    &#96;&#96;&#96;lang [options]
-    [code]
-    &#96;&#96;&#96;
+   ```lang [options]
+   [code]
+   ```
 
 ### Options
 
@@ -56,7 +56,7 @@ Note that order does not matter.
 
 Finally, give it a try. Here's an code snippet sample.
 
-    &#96;``ruby mark:2-4 title:"Testing codefence" url:"https://github.com/octopress/codefence" link_text:"plugin link"
+    ```ruby mark:2-4 title:"Testing codefence" url:"https://github.com/octopress/codefence" link_text:"plugin link"
     class Float
       def number_decimal_places
         self.to_s.length-2
@@ -65,14 +65,14 @@ Finally, give it a try. Here's an code snippet sample.
       def to_fraction
         higher = 10**self.number_decimal_places
         lower = self*higher
-    
+
         gcden = greatest_common_divisor(higher, lower)
-    
+
         return (lower/gcden).round, (higher/gcden).round
       end
       
     private
-    
+
       def greatest_common_divisor(a, b)
          while a%b != 0
            a,b = b.round,(a%b).round
@@ -80,7 +80,7 @@ Finally, give it a try. Here's an code snippet sample.
          return b
       end
     end
-    &#96;``
+    ```
 
 Which renders like this:
 
