@@ -34,9 +34,9 @@ The Octopress codefence has some
 
 ### Syntax
 
-   ```lang [options]
-   [code]
-   ```
+    ```lang [options]
+    [code]
+    ```
 
 ### Options
 
