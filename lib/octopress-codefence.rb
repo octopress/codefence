@@ -16,6 +16,12 @@ module Octopress
       end
     end
 
+    class DocumentHook < Hooks::Document
+      def pre_render(document)
+        document.content = Codefence::Highlighter.new(document.content).render
+      end
+    end
+
     class Highlighter
       AllOptions = /([^\s]+)\s+(.+?)\s+(https?:\/\/\S+|\/\S+)\s*(.+)?/i
       LangCaption = /([^\s]+)\s*(.+)?/i
