@@ -7,3 +7,7 @@ pygments_aliases:
 gems:
   - octopress-codefence
 exclude: [Gemfile*]
+collections:
+  collection:
+    output: true
+    permalink: /:path-collection.html
