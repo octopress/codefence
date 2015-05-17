@@ -1,24 +1,30 @@
 require 'octopress-codefence/version'
 require 'octopress-code-highlighter'
-require 'octopress-hooks'
 
 module Octopress
   module Codefence
-    class PageHook < Hooks::Page
-      def pre_render(page)
-        page.content = Codefence::Highlighter.new(page.content, page.ext, page.site.config['code_aliases']).render
+    if defined?(Jekyll::Hooks)
+      Jekyll::Hooks.register [:post, :page, :document], :pre_render do |item, payload|
+        item.content = Codefence::Highlighter.new(item.content, item.ext, item.site.config['code_aliases']).render
       end
-    end
-
-    class PostHook < Hooks::Post
-      def pre_render(post)
-        post.content = Codefence::Highlighter.new(post.content, post.ext, post.site.config['code_aliases']).render
+    else
+      require 'octopress-hooks'
+      class PageHook < Hooks::Page
+        def pre_render(page)
+          page.content = Codefence::Highlighter.new(page.content, page.ext, page.site.config['code_aliases']).render
+        end
       end
-    end
 
-    class DocumentHook < Hooks::Document
-      def pre_render(document)
-        document.content = Codefence::Highlighter.new(document.content).render
+      class PostHook < Hooks::Post
+        def pre_render(post)
+          post.content = Codefence::Highlighter.new(post.content, post.ext, post.site.config['code_aliases']).render
+        end
+      end
+
+      class DocumentHook < Hooks::Document
+        def pre_render(document)
+          document.content = Codefence::Highlighter.new(document.content).render
+        end
       end
     end
 

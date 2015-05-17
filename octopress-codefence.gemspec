@@ -8,7 +8,6 @@ Gem::Specification.new do |gem|
   gem.version       = Octopress::Codefence::VERSION
   gem.authors       = ["Brandon Mathis"]
   gem.email         = ["brandon@imathis.com"]
-  gem.description   = %q{Generate beautiful code snippets with advanced features on any Jekyll site.}
   gem.summary       = %q{Generate beautiful code snippets with advanced features on any Jekyll site.}
   gem.homepage      = "https://github.com/octopress/codefence"
   gem.license       = "MIT"
@@ -20,6 +19,8 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'jekyll'
   gem.add_development_dependency 'clash'
   gem.add_development_dependency 'rake'
+  gem.add_development_dependency 'rouge'
+  gem.add_development_dependency 'octopress-solarized'
 
   gem.files         = `git ls-files`.split($/).reject {|f| f =~ /^test\// }
   gem.require_paths = ["lib"]
