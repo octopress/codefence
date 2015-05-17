@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.6.1 (2015-05-16)
+- Added support for Jekyll Hooks & Jekyll 3
+
 ### 1.6.0 (2015-03-19)
 - Added support for codefence rendering in collections.
 
