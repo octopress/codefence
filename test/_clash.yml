@@ -1,3 +1,5 @@
 title: Simple build
 build: true
-compare: _expected _site
+compare:
+  - _expected/test-collection.html _site/test-collection.html
+  - _expected/test.html _site/test.html
