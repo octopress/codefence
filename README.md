@@ -2,8 +2,8 @@
 
 Write beautiful fenced code snippets within any template.
 
-[![Gem Version](https://badge.fury.io/rb/octopress-codefence.png)](http://badge.fury.io/rb/octopress-codefence)
-[![Build Status](https://travis-ci.org/octopress/codefence.png?branch=master)](https://travis-ci.org/octopress/codefence)
+[![Gem Version](https://badge.fury.io/rb/octopress-codefence.svg)](http://badge.fury.io/rb/octopress-codefence)
+[![Build Status](https://travis-ci.org/octopress/codefence.svg?branch=master)](https://travis-ci.org/octopress/codefence)
 
 ## Installation
 
@@ -112,11 +112,11 @@ end
 ```
 Here's a themed sample:
 
-<img src="http://cl.ly/TFCm/content.png" alt='sample screenshot of the code snippet above renderd with the light theme' width="816px">
+<img src="http://cl.ly/TFCm/content.svg" alt='sample screenshot of the code snippet above renderd with the light theme' width="816px">
 
 Here's a look at the dark theme:
 
-<img src="http://cl.ly/TFPX/content.png" alt='sample screenshot of the code snippet above renderd with the dark theme' width="816px">
+<img src="http://cl.ly/TFPX/content.svg" alt='sample screenshot of the code snippet above renderd with the dark theme' width="816px">
 
 More documentation coming soon.
 
