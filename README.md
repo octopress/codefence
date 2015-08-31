@@ -112,6 +112,9 @@ end
 ```
 Here's a themed sample:
 
+Note: This plugin does not come with stylesheets. Check out [octopress solarized](https://github.com/octopress/solarized) for styling code
+snippets.
+
 <img src="http://cl.ly/TFCm/content.svg" alt='sample screenshot of the code snippet above renderd with the light theme' width="816px">
 
 Here's a look at the dark theme:
