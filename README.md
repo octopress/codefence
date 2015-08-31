@@ -47,7 +47,7 @@ Note that order does not matter.
 |`lang`        | `ruby`                 | Used by the syntax highlighter. Passing 'plain' disables highlighting.|
 |`title`       | `title:"Figure 1.A"`   | Add a figcaption title to your code block. |
 |`link_text`   | `link_text:"Download"` | Text for the link, default: `"link"`. |
-|`linenos`     | `lineos:false`         | Disable line numbering. |
+|`linenos`     | `linenos:false`        | Disable line numbering. |
 |`start`       | `start:5`              | Start the line numbering at the given value. |
 |`mark`        | `mark:1-4,8`           | Highlight lines of code. This example marks lines 1,2,3,4 and 8 |
 |`class`       | `class:"css example"`  | Add CSS class names to the code `<figure>` element |
