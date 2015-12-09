@@ -13,14 +13,11 @@ Gem::Specification.new do |gem|
   gem.license       = "MIT"
 
   gem.add_runtime_dependency 'octopress-code-highlighter', '~> 4.2'
-  gem.add_runtime_dependency 'octopress-hooks', '~> 2.1'
+  gem.add_runtime_dependency 'jekyll', '~> 3.0'
 
-  gem.add_development_dependency 'octopress'
-  gem.add_development_dependency 'jekyll'
   gem.add_development_dependency 'clash'
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rouge'
-  gem.add_development_dependency 'octopress-solarized'
 
   gem.files         = `git ls-files`.split($/).reject {|f| f =~ /^test\// }
   gem.require_paths = ["lib"]

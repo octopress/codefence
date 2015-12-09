@@ -3,29 +3,13 @@ require 'octopress-code-highlighter'
 
 module Octopress
   module Codefence
-    if defined?(Jekyll::Hooks)
-      Jekyll::Hooks.register [:post, :page, :document], :pre_render do |item, payload|
-        item.content = Codefence::Highlighter.new(item.content, item.ext, item.site.config['code_aliases']).render
+    Jekyll::Hooks.register [:posts, :pages, :documents], :pre_render do |item, payload|
+      if item.respond_to?(:ext)
+        ext = item.ext
+      else
+        ext = nil
       end
-    else
-      require 'octopress-hooks'
-      class PageHook < Hooks::Page
-        def pre_render(page)
-          page.content = Codefence::Highlighter.new(page.content, page.ext, page.site.config['code_aliases']).render
-        end
-      end
-
-      class PostHook < Hooks::Post
-        def pre_render(post)
-          post.content = Codefence::Highlighter.new(post.content, post.ext, post.site.config['code_aliases']).render
-        end
-      end
-
-      class DocumentHook < Hooks::Document
-        def pre_render(document)
-          document.content = Codefence::Highlighter.new(document.content).render
-        end
-      end
+      item.content = Codefence::Highlighter.new(item.content, ext, item.site.config['code_aliases']).render
     end
 
     class Highlighter
@@ -41,8 +25,14 @@ module Octopress
       def render
         @input.encode!("UTF-8")
         @input = sub_option_comment(@input)
+
+        # Match code bwteen backticks
+        #
         @input.gsub /^`{3}(.+?)`{3}/m do
           str = $1.to_s
+
+          # separate code from arguments after backticks
+          #
           str.gsub /([^\n]+)?\n(.+?)\Z/m do
             markup = $1 || ''
             code = $2.to_s

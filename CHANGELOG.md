@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.7.0 (2015-12-08)
+- Now requires Jekyll 3+
+
 ### 1.6.1 (2015-05-16)
 - Added support for Jekyll Hooks & Jekyll 3
 

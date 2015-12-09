@@ -6,7 +6,6 @@ pygments_aliases:
 
 gems:
   - octopress-codefence
-  - octopress-solarized
 exclude: [Gemfile*]
 collections:
   collection:
